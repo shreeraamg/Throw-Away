@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native";
+import colors from "../config/colors";
 
 const WelcomeScreen = () => {
   return (
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   button: {
     width: "95%",
     height: 50,
-    backgroundColor: "#222",
+    backgroundColor: colors.primary,
     borderRadius: 6,
     justifyContent: "center",
     alignItems: "center",
@@ -47,7 +48,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   text: {
-    color: "#DDD",
+    color: colors.text,
+    textTransform: "uppercase",
   },
 });
 
