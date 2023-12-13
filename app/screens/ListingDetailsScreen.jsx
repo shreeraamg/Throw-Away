@@ -12,11 +12,6 @@ const ListingDetailsScreen = () => {
         <AppText style={styles.title}>Couch</AppText>
         <AppText style={styles.price}>₹ 8000</AppText>
         <ListItem />
-        <Card
-          image={require("../assets/couch.jpg")}
-          price={8000}
-          title="Couch"
-        />
       </View>
     </View>
   );
