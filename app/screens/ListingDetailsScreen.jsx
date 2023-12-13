@@ -11,7 +11,9 @@ const ListingDetailsScreen = () => {
       <View style={styles.details}>
         <AppText style={styles.title}>Couch</AppText>
         <AppText style={styles.price}>₹ 8000</AppText>
-        <ListItem />
+        <View style={styles.userContainer}>
+          <ListItem />
+        </View>
       </View>
     </View>
   );
@@ -26,7 +28,6 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "30%",
-    marginTop: StatusBar.currentHeight + 6,
   },
   price: {
     color: colors.green,
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "900",
     fontSize: 24,
+  },
+  userContainer: {
+    marginVertical: 10,
   },
 });
 

@@ -9,7 +9,7 @@ const ListItem = () => {
         source={require("../assets/mosh.jpg")}
         style={styles.profileImage}
       />
-      <View style={styles.textContainer}>
+      <View>
         <AppText style={styles.title}>Mosh Hamedani</AppText>
         <AppText style={styles.subTitle}>5 Listings</AppText>
       </View>
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     gap: 10,
-    marginVertical: 8,
   },
   profileImage: {
     width: 50,

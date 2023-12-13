@@ -1,11 +1,11 @@
 import { StatusBar } from "react-native";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 const App = () => {
   return (
     <>
       <StatusBar />
-      <ViewImageScreen />
+      <ListingDetailsScreen />
     </>
   );
 };
