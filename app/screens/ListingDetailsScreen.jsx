@@ -1,13 +1,22 @@
 import { Image, StatusBar, StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
+import ListItem from "../components/ListItem";
+import AppText from "../components/AppText";
+import Card from "../components/Card";
 
 const ListingDetailsScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/couch.jpg")} style={styles.image} />
       <View style={styles.details}>
-        <Text style={styles.title}>Couch</Text>
-        <Text style={styles.price}>₹ 8000</Text>
+        <AppText style={styles.title}>Couch</AppText>
+        <AppText style={styles.price}>₹ 8000</AppText>
+        <ListItem />
+        <Card
+          image={require("../assets/couch.jpg")}
+          price={8000}
+          title="Couch"
+        />
       </View>
     </View>
   );
@@ -17,7 +26,7 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   details: {
     padding: 8,
-    gap: 6,
+    gap: 4,
   },
   image: {
     width: "100%",
@@ -26,7 +35,7 @@ const styles = StyleSheet.create({
   },
   price: {
     color: colors.green,
-    fontWeight: "600",
+    fontWeight: "700",
     fontSize: 18,
   },
   title: {

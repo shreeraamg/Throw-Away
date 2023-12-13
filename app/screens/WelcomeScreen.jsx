@@ -1,13 +1,14 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 import AppButton from "../components/AppButton";
+import AppText from "../components/AppText";
 
 const WelcomeScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image source={require("../assets/icon.jpeg")} style={styles.logo} />
-        <Text style={styles.tagline}>Sell Everything You Don't Need</Text>
+        <AppText style={styles.tagline}>Sell Everything You Don't Need</AppText>
       </View>
       <AppButton label="Login" />
       <AppButton variant="secondary" label="Register" />

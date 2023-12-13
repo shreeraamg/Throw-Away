@@ -1,13 +1,14 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
+import AppText from "./AppText";
 
 const Card = ({ title, price, image }) => {
   return (
     <View style={styles.card}>
       <Image source={image} style={styles.image} />
       <View style={styles.details}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.price}>₹ {price}</Text>
+        <AppText style={styles.title}>{title}</AppText>
+        <AppText style={styles.price}>₹ {price}</AppText>
       </View>
     </View>
   );
