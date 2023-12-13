@@ -9,8 +9,8 @@ const WelcomeScreen = () => {
         <Image source={require("../assets/icon.jpeg")} style={styles.logo} />
         <Text style={styles.tagline}>Sell Everything You Don't Need</Text>
       </View>
-      <AppButton label="Login" onPress={() => console.log("Login")} />
-      <AppButton label="Register" onPress={() => console.log("Register")} />
+      <AppButton label="Login" />
+      <AppButton variant="secondary" label="Register" />
     </View>
   );
 };
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 5,
+    // backgroundColor: "#F9F9F9",
   },
   logo: {
     width: 200,
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     position: "absolute",
     gap: 15,
-    top: 200,
+    top: "15%",
     alignItems: "center",
   },
   tagline: {

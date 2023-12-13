@@ -1,7 +1,18 @@
 import { StyleSheet, Text, TouchableHighlight } from "react-native";
 import colors from "../config/colors";
 
-const AppButton = ({ label, onPress }) => {
+const AppButton = ({ label, onPress, variant }) => {
+  if (variant == "secondary") {
+    return (
+      <TouchableHighlight
+        style={[styles.button, { backgroundColor: colors.secondary }]}
+        onPress={onPress}
+      >
+        <Text style={[styles.text, { color: colors.primary }]}>{label}</Text>
+      </TouchableHighlight>
+    );
+  }
+
   return (
     <TouchableHighlight style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{label}</Text>
@@ -21,6 +32,7 @@ const styles = StyleSheet.create({
   text: {
     color: colors.text,
     textTransform: "uppercase",
+    fontWeight: "700",
   },
 });
 
