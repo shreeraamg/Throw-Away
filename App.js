@@ -1,13 +1,7 @@
-import { StatusBar } from "react-native";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 const App = () => {
-  return (
-    <>
-      <StatusBar />
-      <ListingDetailsScreen />
-    </>
-  );
+  return <MessagesScreen />;
 };
 
 export default App;

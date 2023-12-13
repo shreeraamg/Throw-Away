@@ -2,7 +2,6 @@ import { Image, StatusBar, StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 import ListItem from "../components/ListItem";
 import AppText from "../components/AppText";
-import Card from "../components/Card";
 
 const ListingDetailsScreen = () => {
   return (
@@ -12,7 +11,11 @@ const ListingDetailsScreen = () => {
         <AppText style={styles.title}>Couch</AppText>
         <AppText style={styles.price}>₹ 8000</AppText>
         <View style={styles.userContainer}>
-          <ListItem />
+          <ListItem
+            title="Mosh Hamedani"
+            description="5 Listings"
+            image={require("../assets/mosh.jpg")}
+          />
         </View>
       </View>
     </View>

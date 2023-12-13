@@ -2,16 +2,13 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-const ListItem = () => {
+const ListItem = ({ title, description, image }) => {
   return (
     <View style={styles.container}>
-      <Image
-        source={require("../assets/mosh.jpg")}
-        style={styles.profileImage}
-      />
+      <Image source={image} style={styles.profileImage} />
       <View>
-        <AppText style={styles.title}>Mosh Hamedani</AppText>
-        <AppText style={styles.subTitle}>5 Listings</AppText>
+        <AppText style={styles.title}>{title}</AppText>
+        <AppText style={styles.description}>{description}</AppText>
       </View>
     </View>
   );
@@ -21,13 +18,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     gap: 10,
+    padding: 8,
   },
   profileImage: {
     width: 50,
     height: 50,
     borderRadius: 30,
   },
-  subTitle: {
+  description: {
     color: colors.primary,
     fontSize: 12,
   },
