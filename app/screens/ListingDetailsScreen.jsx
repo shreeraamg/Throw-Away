@@ -1,7 +1,8 @@
-import { Image, StatusBar, StyleSheet, Text, View } from "react-native";
-import colors from "../config/colors";
-import ListItem from "../components/ListItem";
+import { Image, StyleSheet, View } from "react-native";
+
 import AppText from "../components/AppText";
+import ListItem from "../components/ListItem";
+import colors from "../config/colors";
 
 const ListingDetailsScreen = () => {
   return (

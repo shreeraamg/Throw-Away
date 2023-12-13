@@ -1,14 +1,10 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-} from "react-native";
-import colors from "../config/colors";
-import AppText from "./AppText";
+import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import Swipeable from "react-native-gesture-handler/Swipeable";
-import Icon from "./Icon";
+
+import colors from "../../config/colors";
+import AppText from "../AppText";
+import ListItemDeleteAction from "./ListItemDeleteAction";
+import ListItemSeparator from "./ListItemSeparator";
 
 const ListItem = ({
   title,
@@ -57,3 +53,4 @@ const styles = StyleSheet.create({
 });
 
 export default ListItem;
+export { ListItemDeleteAction, ListItemSeparator };

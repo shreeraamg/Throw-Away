@@ -1,9 +1,11 @@
-import { FlatList, View } from "react-native";
-import ListItem from "../components/ListItem";
-import Screen from "../components/Screen";
-import ListItemSeparator from "../components/ListItemSeparator";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
 import { useState } from "react";
+import { FlatList } from "react-native";
+
+import ListItem, {
+  ListItemDeleteAction,
+  ListItemSeparator,
+} from "../components/ListItem";
+import Screen from "../components/Screen";
 
 const newData = [
   { id: 1, name: "Shreeraam", image: require("../assets/mosh.jpg") },
@@ -47,7 +49,9 @@ const MessagesScreen = () => {
         )}
         refreshing={refreshing}
         onRefresh={() => {
+          setRefreshing(true);
           setUsers(newData);
+          setRefreshing(false);
         }}
         ItemSeparatorComponent={ListItemSeparator}
       />

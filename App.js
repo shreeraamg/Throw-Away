@@ -1,9 +1,9 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import { View } from "react-native";
-import Screen from "./app/components/Screen";
-import ListItem from "./app/components/ListItem";
+
 import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
+import Screen from "./app/components/Screen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
           IconComponent={<Icon name="email" />}
         />
       </Screen>
+      <MessagesScreen />
     </GestureHandlerRootView>
   );
 };

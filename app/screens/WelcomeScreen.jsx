@@ -1,7 +1,8 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-import colors from "../config/colors";
+import { Image, StyleSheet, View } from "react-native";
+
 import AppButton from "../components/AppButton";
 import AppText from "../components/AppText";
+import colors from "../config/colors";
 
 const WelcomeScreen = () => {
   return (

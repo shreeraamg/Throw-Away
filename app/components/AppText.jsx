@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Platform } from "react-native";
+import { Platform, StyleSheet, Text } from "react-native";
 
 const AppText = ({ children, style }) => {
   return <Text style={[styles.text, style]}>{children}</Text>;
