@@ -21,8 +21,10 @@ const ListItem = ({
           {IconComponent}
           {image && <Image source={image} style={styles.profileImage} />}
           <View>
-            <AppText style={styles.title}>{title}</AppText>
-            <AppText style={styles.description}>{description}</AppText>
+            <AppText style={!IconComponent && styles.title}>{title}</AppText>
+            {description && (
+              <AppText style={styles.description}>{description}</AppText>
+            )}
           </View>
         </View>
       </TouchableHighlight>

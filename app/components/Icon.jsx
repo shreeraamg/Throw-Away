@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 
 import colors from "../config/colors";
 
-const Icon = ({ name, size = 40 }) => {
+const Icon = ({ name, size = 36 }) => {
   return (
     <View
       style={{
