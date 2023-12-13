@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 
 import colors from "../config/colors";
 
@@ -23,7 +23,5 @@ const Icon = ({ name, size = 36 }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({ icon: {} });
 
 export default Icon;
