@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import { StyleSheet, Text, View, TextInput, Keyboard } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
@@ -25,9 +25,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textInput: {
-    width: "100%",
-    // paddingLeft: 10,
-    fontSize: 16,
+    flex: 1,
   },
 });
 

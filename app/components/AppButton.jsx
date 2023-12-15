@@ -24,8 +24,8 @@ const AppButton = ({ label, onPress, variant }) => {
 const styles = StyleSheet.create({
   button: {
     width: "100%",
-    height: 50,
     backgroundColor: colors.primary,
+    paddingVertical: 10,
     borderRadius: 6,
     justifyContent: "center",
     alignItems: "center",
