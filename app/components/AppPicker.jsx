@@ -1,5 +1,4 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useState } from "react";
 import {
   Alert,
   StyleSheet,
@@ -10,17 +9,19 @@ import {
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-const CustomPicker = ({ icon, placeholder, ...props }) => {
-  const [selectedCategory, setSelectedCategory] = useState("");
-
+const AppPicker = ({
+  icon,
+  placeholder,
+  items,
+  onSelectItem,
+  selectedItem,
+  ...props
+}) => {
   function handleClick() {
     Alert.alert("Select a Category", null, [
-      { text: "Furniture", onPress: () => setSelectedCategory("Furniture") },
-      { text: "Clothing", onPress: () => setSelectedCategory("Clothing") },
-      {
-        text: "Electronics",
-        onPress: () => setSelectedCategory("Electronics"),
-      },
+      { text: items[0], onPress: () => onSelectItem(items[0]) },
+      { text: items[1], onPress: () => onSelectItem(items[1]) },
+      { text: items[2], onPress: () => onSelectItem(items[2]) },
     ]);
   }
 
@@ -35,7 +36,7 @@ const CustomPicker = ({ icon, placeholder, ...props }) => {
           />
         )}
         <AppText style={styles.text}>
-          {selectedCategory ? selectedCategory : placeholder}
+          {selectedItem ? selectedItem : placeholder}
         </AppText>
         <MaterialCommunityIcons
           name="chevron-down"
@@ -63,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CustomPicker;
+export default AppPicker;
